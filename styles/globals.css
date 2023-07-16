@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'roboto';
+  src: url('../public/assets/fonts/Roboto-Regular.ttf') ;
+ 
+}
+@font-face {
+  font-family: 'GreatVibes';
+  src: url('../public/assets/fonts/GreatVibes-Regular.ttf') ;
+ 
+}
+body {
+font-family: 'roboto';
+
+}
+.signature{
+  font-family: 'GreatVibes';
+
+}
+@layer base {  
+ 
+  body {
+    @apply  tracking-wide bg-[#37533c] text-[#52c867]
+
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold
+  }
+
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl font-[Raleway] font-bold capitalize leading-[120%] tracking-[-0.05em] mb-10
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl capitalize
+  }
+
+  h3 {
+    @apply text-2xl sm:text-3xl capitalize leading-[120%] tracking-[-0.05em] font-semibold
+  }
+  h4 {
+    @apply text-xl sm:text-2xl capitalize leading-[120%] tracking-[-0.05em] font-semibold
+  }
+  
+  li {
+    @apply cursor-pointer
+  }
+
+  button {
+    @apply shadow-inner shadow-[#71d283] rounded-lg uppercase bg-gradient-to-r from-[#488b54] to-[#426048] text-white w-24 py-2 hover:scale-105 ease-in transition
+  }
+ .active-link{
+  @apply shadow-inner shadow-[#71d283] rounded-lg uppercase bg-gradient-to-r from-[#488b54] to-[#426048] text-white w-24 py-2
+ }
+
+  .link {
+    @apply px-4 uppercase    font-bold   ease-in transition;
+  }
+  .icon{
+    @apply cursor-pointer rounded-full shadow-inner shadow-[#52c867] hover:scale-105 ease-in duration-300 text-xl p-3
+  }
+
+  .container {
+    width: 85% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 85% !important;
+  }
+  
+  @media (max-width: 800px) {
+    .container {
+      width: 90% !important;
+      max-width: 90% !important;
+    }
+  }
+  .front-end::after {
+    content: "frontend";
+    position: absolute;
+    right: 2.3rem;
+    font-size: 7rem;
+    font-weight: 900;
+    letter-spacing: -8px;
+    text-transform: uppercase;
+    opacity: 0.3;
+  }
+  .front-end::before {
+    content: "developer";
+    position: absolute;
+    right: 6px;
+    top: 5.2rem;
+    font-size: 7rem;
+    font-weight: 900;
+    letter-spacing: -8px;
+    text-transform: uppercase;
+    opacity: 0.3;
+  }
+ 
+}
