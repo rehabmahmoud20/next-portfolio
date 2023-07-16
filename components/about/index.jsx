@@ -1,9 +1,11 @@
+
 import Image from "next/image";
 import AboutMe from "../../public/assets/images/aboutme.png";
 const About = () => {
   return (
+   
     <article className="container mx-auto  px-4 min-h-screen flex items-center py-10 lg:py-0">
-      <div className="flex flex-col lg:flex-row  gap-y-10  justify-between">
+       <div className="flex flex-col lg:flex-row  gap-y-10  justify-between">
         {/* content */}
         <div className="w-full lg:w-1/2 text-center lg:text-start">
           <h2 className=" mb-10">About me</h2>
@@ -21,7 +23,7 @@ const About = () => {
         <div className="mx-auto lg:m-0 hover:scale-105 ease-in duration-300 cursor-pointer">
           <Image src={AboutMe} alt="developer_img" />
         </div>
-      </div>
+      </div> 
     </article>
   );
 };

@@ -45,7 +45,6 @@ const MobileNav = () => {
                 className=" rounded-full"
                 width={40}
                 height={40}
-                
               />
             </Link>
             <div className=" text-xl p-3 cursor-pointer rounded-full shadow-lg shadow-gray-400">
@@ -55,17 +54,23 @@ const MobileNav = () => {
 
           {/* nav */}
           <ul className=" flex flex-col text-sm gap-y-8 border-t pt-4 mb-40">
-          {links.map((item) => (
-            <Link
-              key={item.name}
-              href={item.path}
-              className={
-                pathname === item.path ? "active-link link" : " link"
-              }
-            >
-              {item.name}
-            </Link>
-          ))}
+            {links.map((item) => (
+              <div
+                key={item.name}
+                onClick={
+                  handleMenue
+                }              
+                >
+                <Link
+                  href={item.path}
+                  className={
+                    pathname === item.path ? "active-link link" : " link"
+                  }
+                >
+                  {item.name}
+                </Link>
+              </div>
+            ))}
           </ul>
           {/* socials */}
           <div className="pl-4 ">
